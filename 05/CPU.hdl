@@ -53,11 +53,11 @@ CHIP CPU {
     Mux(a=five,b=six,sel=instruction[0],out=k);
     Mux(a=seven,b=true,sel=instruction[0],out=l);
     Mux(a=m,b=n,sel=instruction[1],out=i);
-    Mux(a=k.b=l,sel=instruction[1],out=o);
-    mux(a=i,b=o,sel=instruction[2],out=loadpc);
+    Mux(a=k,b=l,sel=instruction[1],out=o);
+    Mux(a=i,b=o,sel=instruction[2],out=loadpc);
     Not(in=zr,out=nzr,out=six);
     Not(in=ng,out=nng,out=four);
-    And(a=nzr.b=nng,out=two);
+    And(a=nzr,b=nng,out=two);
     And(a=zr,b=nng,out=three);
     And(a=nzr,b=ng,out=five);
     Xor(a=zr,b=ng,out=seven);
