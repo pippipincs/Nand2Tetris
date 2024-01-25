@@ -19,8 +19,8 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-    RAM16K(in=in,load=load,address=address[0..14],out=ram);
-    Screen(in=in,load=load,address=address[0..13],out=scr);
+    RAM16K(in=in,load=load,address=address[0..13],out=ram);
+    Screen(in=in,load=load,address=address[0..12],out=scr);
     Keyboard(out=kb);
     Mux16(a=ram,b=scr,sel=address[14],out=selection);
     Mux16(a=selection,b=kb,sel=ad,out=out);
