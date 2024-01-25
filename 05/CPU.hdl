@@ -46,7 +46,7 @@ CHIP CPU {
     Mux(a=false,b=instruction[8],sel=instruction[15],out=c4);
     Mux(a=false,b=instruction[7],sel=instruction[15],out=c5);
     Mux(a=false,b=instruction[6],sel=instruction[15],out=c6);
-    Mux(a=false,b=instruction[3],sel=instruction[0],out=writeM);
+    Mux(a=false,b=instruction[3],sel=instruction[15],out=writeM);
     PC(in=addr,load=loadpc,inc=true,reset=reset,out[0..14]=pc);
     Mux(a=false,b=two,sel=instruction[0],out=m);
     Mux(a=three,b=four,sel=instruction[0],out=n);
