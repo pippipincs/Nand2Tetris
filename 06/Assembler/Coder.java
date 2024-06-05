@@ -1,3 +1,4 @@
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ public class Coder {
         compMap.put("D|M", "1010101");
 
         // Initialize destMap
-        destMap.put("null", "000");
+        destMap.put("", "000");
         destMap.put("M",    "001");
         destMap.put("D",    "010");
         destMap.put("DM",   "011");
@@ -48,7 +49,7 @@ public class Coder {
         destMap.put("ADM",  "111");
 
         // Initialize jumpMap
-        jumpMap.put("null", "000");
+        jumpMap.put("", "000");
         jumpMap.put("JGT",  "001");
         jumpMap.put("JEQ",  "010");
         jumpMap.put("JGE",  "011");
