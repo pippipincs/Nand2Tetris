@@ -45,9 +45,7 @@ public class Parser {
                 break;
             }
         }
-        if(!scanner.hasNextLine()){
-            scanner.close();
-        }
+        
     }
 
     public String commandType() {
