@@ -57,7 +57,7 @@ public class Parser {
         if(word.equals("call")){
             return "C_CALL";
         }
-        return "C_ARITHMETIC";
+        return word;
     }
     public String arg1() {
         String[] words = currentline.split("\\s+");
