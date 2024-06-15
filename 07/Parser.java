@@ -35,33 +35,10 @@ public class Parser {
         String[] words = currentline.split("\\s+");
         String word = words[0];        
         
-        if(word.equals("push")){
-            return "push";
-        }
-        if(word.equals("pop")){
-            return "pop";
-        }
-        
-        if(word.equals("label")){
-            return "C_LABEL";
-        }
-        if(word.equals("goto")){
-            return "C_GOTO";
-        }
-        if(word.equals("if-goto")){
-            return "C_IF";
-        }
-        if(word.equals("function")){
-            return "C_FUNCTION";
-        }
-        if(word.equals("return")){
-            return "C_RETURN";
-        }
-        if(word.equals("call")){
-            return "C_CALL";
-        }
+       
         return word;
     }
+
     public String arg1() {
         String[] words = currentline.split("\\s+");
     
