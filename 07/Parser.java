@@ -13,7 +13,7 @@ public class Parser {
 
     }
 
-    public boolean hasMoreCommands() throws IOException {
+    public boolean advance() throws IOException {
         
         while(true){
             currentline = br.readLine().trim();
