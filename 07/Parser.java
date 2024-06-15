@@ -16,13 +16,14 @@ public class Parser {
     public boolean advance() throws IOException {
         
         while(true){
-            currentline = br.readLine().trim();
+            currentline = br.readLine();
             if(currentline==null){
                 return false;
             }
             if(currentline.startsWith("//") || currentline.isBlank()){
                 continue;
             }
+            currentline=currentline.trim();
             break;
             
 
