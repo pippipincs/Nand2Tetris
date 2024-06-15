@@ -36,10 +36,10 @@ public class Parser {
         String word = words[0];        
         
         if(word.equals("push")){
-            return "C_PUSH";
+            return "push";
         }
         if(word.equals("pop")){
-            return "C_POP";
+            return "pop";
         }
         
         if(word.equals("label")){
