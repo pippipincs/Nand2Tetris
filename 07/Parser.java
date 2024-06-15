@@ -30,7 +30,14 @@ public class Parser {
         return true;
         
     }
-
+    public boolean if_arith(){
+        String[] words = currentline.split("\\s+");
+        if (words.length==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public String commandType() {
         String[] words = currentline.split("\\s+");
         String word = words[0];        
