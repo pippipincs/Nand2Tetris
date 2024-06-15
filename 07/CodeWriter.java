@@ -16,7 +16,7 @@ public class CodeWriter {
         bw.close();
     }
     public void WriteAssembly(String type, String a1, int a2, Parser parser) throws IOException{
-        if(type=="push"){
+        if(type=="push" || type=="pop"){
             writePushPop(type, a1, a2, parser);
         }else{
             writeArithmetic(type);
