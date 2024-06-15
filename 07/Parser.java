@@ -6,8 +6,11 @@ public class Parser {
 
     private String currentline;
     private BufferedReader br;
+    public String name;
     public Parser(String filename) throws IOException {
         br = new BufferedReader(new FileReader(filename));
+        name = filename;
+
     }
 
     public boolean hasMoreCommands() throws IOException {
