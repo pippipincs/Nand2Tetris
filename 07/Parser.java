@@ -9,7 +9,7 @@ public class Parser {
     public String name;
     public Parser(String filename) throws IOException {
         br = new BufferedReader(new FileReader(filename));
-        name = filename;
+        name = filename.split("\\.")[0];
 
     }
 
