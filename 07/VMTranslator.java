@@ -5,9 +5,12 @@ public class VMTranslator {
        CodeWriter codewriter=new CodeWriter(parser.name+".asm");
        while(parser.advance()){
             String type=parser.commandType();
-            String arg1=parser.arg1();
-            int arg2=parser.arg2();
-            codewriter.WriteAssembly(type,arg1,arg2,parser);
+            if(parser.if_arith()){
+                codewriter.writeArithmetic(type);
+            }else{
+                codewriter.writePushPop(type,parser.arg1(), parser.arg2(),parser);
+            }
+            
 
        }
        codewriter.close();
